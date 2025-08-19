@@ -1,4 +1,4 @@
-# 📝 Changelog
+# Changelog
 
 All notable changes to the Nibiru Money Market project will be documented in this file.
 
@@ -85,7 +85,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## 📋 Release Notes
+## Release Notes
 
 ### Version 0.1.0 - Initial Release
 This is the first public release of the Nibiru Money Market project. It includes a complete, production-ready money market protocol with:
@@ -97,55 +97,4 @@ This is the first public release of the Nibiru Money Market project. It includes
 
 ### Key Features
 1. **Smart Contract Architecture**: Well-designed, secure smart contracts following best practices
-2. **Frontend Application**: Professional React application with TypeScript and modern styling
-3. **Wallet Integration**: Seamless Keplr wallet connection and transaction handling
-4. **Risk Management**: Advanced comptroller system for liquidation and risk assessment
-5. **Developer Experience**: Comprehensive documentation, testing, and deployment tools
-
-### Getting Started
-1. Clone the repository
-2. Follow the installation instructions in README.md
-3. Run the development server
-4. Connect your Keplr wallet
-5. Start using the money market!
-
----
-
-## 🔄 Migration Guide
-
-### From 0.0.1 to 0.1.0
-This is the initial release, so no migration is required.
-
----
-
-## 📊 Statistics
-
-- **Lines of Code**: ~5,000+
-- **Smart Contracts**: 2 (Market + Comptroller)
-- **Frontend Components**: 10+
-- **Test Coverage**: 90%+
-- **Documentation**: Comprehensive
-- **Supported Networks**: 3+ (Nibiru, Juno, Osmosis)
-
----
-
-## 🙏 Acknowledgments
-
-- **Nibiru Team**: For the blockchain infrastructure
-- **CosmWasm Community**: For the smart contract framework
-- **React Team**: For the frontend framework
-- **Tailwind CSS**: For the beautiful styling system
-- **Contributors**: All community members who helped build this project
-
----
-
-## 📞 Support
-
-For support and questions:
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/nibiru-money-market/issues)
-- **Documentation**: [Read the docs](./README.md)
-- **Community**: [Join our Discord](https://discord.gg/nibiru)
-
----
-
-*This changelog is maintained by the Nibiru Money Market team and community contributors.* 
+2. **Frontend Application**: Professional React application with TypeScript and modern styling 

@@ -1,4 +1,4 @@
-# 🚀 Nibiru Money Market
+# Nibiru Money Market
 
 A professional, production-ready money market protocol built on the Nibiru blockchain with a modern React frontend and CosmWasm smart contracts.
 
@@ -8,16 +8,16 @@ A professional, production-ready money market protocol built on the Nibiru block
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://typescriptlang.org)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3+-38B2AC.svg)](https://tailwindcss.com)
 
-## 🌟 Features
+## Features
 
-- **💰 Supply & Borrow**: Lend and borrow assets with real-time balance tracking
-- **🏛️ Risk Management**: Advanced comptroller system for liquidation and risk assessment
-- **🎨 Modern UI**: Beautiful, responsive interface with glassmorphism design
-- **🔗 Wallet Integration**: Seamless Keplr wallet connection
-- **📱 Mobile First**: Optimized for all devices
-- **⚡ Real-time Updates**: Live portfolio tracking and health factor monitoring
+- **Supply & Borrow**: Lend and borrow assets with real-time balance tracking
+- **Risk Management**: Advanced comptroller system for liquidation and risk assessment
+- **Modern UI**: Beautiful, responsive interface with glassmorphism design
+- **Wallet Integration**: Seamless Keplr wallet connection
+- **Mobile First**: Optimized for all devices
+- **Real-time Updates**: Live portfolio tracking and health factor monitoring
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 money-market/
@@ -32,7 +32,7 @@ money-market/
 └── scripts/            # Deployment and utility scripts
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -67,7 +67,7 @@ money-market/
 
 Your money market will be available at [http://localhost:3000](http://localhost:3000)
 
-## 📜 Smart Contracts
+## Smart Contracts
 
 ### Market Contract
 Handles individual asset markets for lending and borrowing operations.
@@ -89,7 +89,7 @@ pub fn enter_market(deps: DepsMut, user: String, market: String) -> Result<Respo
 pub fn liquidate(deps: DepsMut, borrower: String, market: String) -> Result<Response, ContractError>
 ```
 
-## 🚀 Deployment
+## Deployment
 
 ### Quick Deployment
 ```bash
@@ -117,7 +117,7 @@ CHAIN_ID="uni-6" RPC_URL="https://rpc.uni.junonetwork.io:443" ./deploy-to-produc
    nibid tx wasm instantiate <CODE_ID> '{}' --from deployer --chain-id nibiru-testnet-2
    ```
 
-## 🎨 Frontend Features
+## Frontend Features
 
 - **Portfolio Management**: Real-time tracking of supplied and borrowed assets
 - **Health Factor Monitoring**: Visual indicators for account health
@@ -126,7 +126,7 @@ CHAIN_ID="uni-6" RPC_URL="https://rpc.uni.junonetwork.io:443" ./deploy-to-produc
 - **Responsive Design**: Optimized for desktop, tablet, and mobile
 - **Dark Theme**: Modern, eye-friendly interface
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 ```bash
@@ -139,7 +139,7 @@ GAS_PRICES=0.025unibi
 ### Contract Addresses
 Update `frontend/src/config/contracts.ts` with your deployed contract addresses.
 
-## 🧪 Testing
+## Testing
 
 ### Smart Contract Tests
 ```bash
@@ -158,14 +158,14 @@ npm test
 npm run test:integration
 ```
 
-## 📚 Documentation
+## Documentation
 
 - [Smart Contract API](./contracts/README.md)
 - [Frontend Components](./frontend/README.md)
 - [Deployment Guide](./DEPLOYMENT_CONTRACTS.md)
 - [Development Guide](./DEVELOPING.md)
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
 
@@ -176,18 +176,18 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Nibiru](https://nibiru.fi/) for the blockchain infrastructure
 - [CosmWasm](https://cosmwasm.com/) for the smart contract framework
 - [Keplr](https://www.keplr.app/) for wallet integration
 - [Tailwind CSS](https://tailwindcss.com/) for the beautiful UI
 
-## 📞 Support
+## Support
 
 - **Documentation**: [https://docs.nibiru.fi](https://docs.nibiru.fi)
 - **Discord**: [Nibiru Community](https://discord.gg/nibiru)
@@ -196,6 +196,6 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ---
 
-**⭐ Star this repository if you found it helpful!**
+**Star this repository if you found it helpful!**
 
-*Built with ❤️ by the Nibiru community*
+*Built with love by the Nibiru community*

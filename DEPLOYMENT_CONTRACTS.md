@@ -1,13 +1,13 @@
-# 🚀 Nibiru Money Market - Deployment Contracts
+# Nibiru Money Market - Deployment Contracts
 
-## 📋 **Current Deployment Status**
+## Current Deployment Status
 
-### **✅ Frontend Application**
-- **Status:** ✅ **LIVE and Running**
-- **URL:** http://localhost:3000
-- **Features:** Complete money market interface with supply/borrow functionality
+### Frontend Application
+- **Status**: LIVE and Running
+- **URL**: http://localhost:3000
+- **Features**: Complete money market interface with supply/borrow functionality
 
-### **📜 Contract Addresses (Current Configuration)**
+### Contract Addresses (Current Configuration)
 
 ```typescript
 // Frontend Configuration - contracts.ts
@@ -16,7 +16,7 @@ export const CONTRACTS = {
   chainId: 'nibiru-testnet-2',
   rpcUrl: 'https://rpc.testnet-2.nibiru.fi:443',
   restUrl: 'https://lcd.testnet-2.nibiru.fi',
-  
+
   // Contract Addresses
   comptroller: 'nibi14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s4hmalr',
   markets: {
@@ -27,194 +27,101 @@ export const CONTRACTS = {
 };
 ```
 
----
+### What This Means
+- **Frontend**: Fully functional with mock contract addresses
+- **Smart Contracts**: Not yet deployed (using placeholder addresses)
+- **Functionality**: All features work in demo mode
+- **User Experience**: Complete money market interface
 
-## 🛠️ **Deployment Options**
+## Deployment Options
 
-### **Option 1: Use Current Demo Configuration**
-Your frontend is **already working** with the current contract addresses. You can:
-- Test all functionality at http://localhost:3000
-- Connect Keplr wallet and interact with the interface
-- Experience the full money market features
+### Option A: Demo Mode (Current)
+- **Status**: Ready to use
+- **Frontend**: Fully functional
+- **Contracts**: Mock addresses for demonstration
+- **Use Case**: Showcase, testing, development
 
-### **Option 2: Deploy New Contracts (Production)**
+### Option B: Deploy New Contracts
+- **Status**: Ready to deploy
+- **Scripts**: Automated deployment available
+- **Networks**: Nibiru, Juno, Osmosis support
+- **Use Case**: Production deployment
 
-Use the **production deployment script** I created for you:
+### Option C: Use Existing Contracts
+- **Status**: Requires contract addresses
+- **Frontend**: Ready to connect
+- **Configuration**: Update contracts.ts
+- **Use Case**: Connect to deployed contracts
 
+## How to Deploy Your Own Contracts
+
+### Prerequisites
+1. nibid CLI installed and configured
+2. Wallet with sufficient funds
+3. Target network RPC access
+
+### Deployment Steps
+1. Navigate to scripts directory
+2. Make deployment script executable
+3. Configure network parameters
+4. Deploy Comptroller contract
+5. Instantiate all contracts
+6. Update frontend configuration
+7. Generate deployment summary
+
+### Quick Start
 ```bash
-# Deploy to Nibiru Testnet-2 (recommended)
-./deploy-to-production.sh
-
-# Deploy to other networks
-CHAIN_ID="uni-6" RPC_URL="https://rpc.uni.junonetwork.io:443" ./deploy-to-production.sh
-```
-
----
-
-## 📁 **Deployment Files Created**
-
-### **1. Production Deployment Script**
-- **File:** `deploy-to-production.sh`
-- **Purpose:** Complete automated deployment to any CosmWasm chain
-- **Features:**
-  - Automatic contract compilation and optimization
-  - Balance checking and validation
-  - Contract deployment and instantiation
-  - Frontend configuration generation
-
-### **2. Network Configuration**
-- **File:** `deployment-config.json`
-- **Purpose:** Multi-network deployment configuration
-- **Networks:** Nibiru, Juno, Osmosis (testnet and mainnet)
-
-### **3. Current Frontend Config**
-- **File:** `frontend/src/config/contracts.ts`
-- **Purpose:** Active contract addresses for the frontend
-- **Status:** ✅ Working with demo contracts
-
----
-
-## 🚀 **How to Deploy Your Own Contracts**
-
-### **Prerequisites:**
-1. ✅ Funded wallet (you have: `nibi1z207rtxzvcm43cljgtdz2y7d7cukl8uapvedgf`)
-2. ✅ nibid CLI installed
-3. ✅ Rust and wasm32 target
-4. ✅ All dependencies ready
-
-### **Step 1: Run Deployment Script**
-```bash
-# Make sure you're in the project root
-cd /Users/vicgunga/money-market
-
-# Run the deployment
+cd scripts
+chmod +x deploy-to-production.sh
 ./deploy-to-production.sh
 ```
 
-### **Step 2: The Script Will:**
-1. 🔨 Compile your smart contracts
-2. 📦 Optimize WASM files (if Docker available)
-3. 🏪 Deploy Market contract
-4. 🏛️ Deploy Comptroller contract
-5. 🎯 Instantiate all contracts
-6. ⚛️ Update frontend configuration
-7. 📝 Generate deployment summary
+## Smart Contract Architecture
 
-### **Step 3: Test Your Deployment**
-- Frontend will automatically use new contract addresses
-- Test all functionality: supply, borrow, withdraw, repay
-- Monitor transactions on Nibiru explorer
+### Market Contract
+- **Purpose**: Individual asset markets
+- **Functions**: Supply, withdraw, borrow, repay
+- **Features**: Interest accrual, liquidation
 
----
+### Comptroller Contract
+- **Purpose**: Risk management and coordination
+- **Functions**: Market entry, liquidation, risk assessment
+- **Features**: Multi-market support, safety checks
 
-## 📊 **Smart Contract Architecture**
+## Your Options Right Now
 
-### **Market Contract** (`market.wasm`)
-```rust
-// Core Functions
-pub fn supply(deps: DepsMut, amount: Uint128) -> Result<Response, ContractError>
-pub fn withdraw(deps: DepsMut, amount: Uint128) -> Result<Response, ContractError>
-pub fn borrow(deps: DepsMut, amount: Uint128) -> Result<Response, ContractError>
-pub fn repay(deps: DepsMut, amount: Uint128) -> Result<Response, ContractError>
+### Option A: Keep Demo Mode
+- **Pros**: Ready to use, no deployment needed
+- **Cons**: Not connected to real blockchain
+- **Best For**: Development, testing, demos
 
-// Queries
-pub fn get_balance(deps: Deps, user: String) -> StdResult<BalanceResponse>
-pub fn get_borrow_rate(deps: Deps) -> StdResult<RateResponse>
-pub fn get_supply_rate(deps: Deps) -> StdResult<RateResponse>
-```
+### Option B: Deploy New Contracts
+- **Pros**: Full control, production ready
+- **Cons**: Requires deployment effort
+- **Best For**: Production use, custom deployment
 
-### **Comptroller Contract** (`comptroller.wasm`)
-```rust
-// Risk Management
-pub fn enter_market(deps: DepsMut, user: String, market: String) -> Result<Response, ContractError>
-pub fn exit_market(deps: DepsMut, user: String, market: String) -> Result<Response, ContractError>
-pub fn liquidate(deps: DepsMut, borrower: String, market: String) -> Result<Response, ContractError>
+### Option C: Migrate to Nibiru EVM
+- **Pros**: Better compatibility, more tools
+- **Cons**: Requires contract rewrite
+- **Best For**: Long-term production use
 
-// Queries
-pub fn get_account_liquidity(deps: Deps, user: String) -> StdResult<LiquidityResponse>
-pub fn get_markets(deps: Deps) -> StdResult<MarketsResponse>
-```
+## Support & Next Steps
 
----
+### Immediate Actions
+1. **Test Frontend**: Verify all features work
+2. **Choose Path**: Decide on deployment strategy
+3. **Plan Deployment**: If choosing Option B
 
-## 🌐 **Network Deployment Options**
+### Resources
+- [Nibiru Documentation](https://docs.nibiru.fi)
+- [CosmWasm Guide](https://docs.cosmwasm.com)
+- [Deployment Scripts](./scripts/)
 
-### **Nibiru Testnet-2** (Current)
-- **Chain ID:** `nibiru-testnet-2`
-- **RPC:** `https://rpc.testnet-2.nibiru.fi:443`
-- **Faucet:** https://faucet.testnet-2.nibiru.fi/
-- **Explorer:** https://explorer.testnet-2.nibiru.fi
-
-### **Alternative Networks:**
-```bash
-# Juno Testnet
-CHAIN_ID="uni-6" RPC_URL="https://rpc.uni.junonetwork.io:443" ./deploy-to-production.sh
-
-# Osmosis Testnet  
-CHAIN_ID="osmo-test-5" RPC_URL="https://rpc.testnet.osmosis.zone:443" ./deploy-to-production.sh
-```
+### Questions?
+- Check the documentation
+- Review deployment scripts
+- Consider your use case
 
 ---
 
-## 💡 **Deployment Troubleshooting**
-
-### **Common Issues:**
-
-1. **"Bulk memory support not enabled"**
-   - Use older CosmWasm versions (1.0.0)
-   - Compile with: `RUSTFLAGS='-C target-feature=-bulk-memory'`
-
-2. **"Insufficient balance"**
-   - Fund your wallet: `nibi1z207rtxzvcm43cljgtdz2y7d7cukl8uapvedgf`
-   - Visit: https://faucet.testnet-2.nibiru.fi/
-
-3. **"Contract instantiation failed"**
-   - Check init message format
-   - Verify comptroller address in market init
-
-### **Recommended Approach:**
-Since Nibiru now focuses on EVM compatibility, consider:
-1. **Current Setup:** Use the working demo for testing
-2. **Future:** Migrate to Nibiru EVM with Solidity contracts
-3. **Alternative:** Deploy to Juno/Osmosis for CosmWasm
-
----
-
-## 🎯 **Your Options Right Now**
-
-### **✅ Option A: Use Current Working Setup**
-- **Status:** ✅ Ready to use immediately
-- **URL:** http://localhost:3000  
-- **Features:** Full money market functionality
-- **Best for:** Testing, demos, development
-
-### **🚀 Option B: Deploy New Contracts**
-- **Command:** `./deploy-to-production.sh`
-- **Time:** ~10 minutes
-- **Result:** Your own deployed contracts
-- **Best for:** Production, ownership, customization
-
-### **🔄 Option C: Migrate to Nibiru EVM**
-- **Approach:** Rewrite contracts in Solidity
-- **Benefits:** Better Nibiru compatibility
-- **Timeline:** Future enhancement
-
----
-
-## 📞 **Support & Next Steps**
-
-**Your money market is ready!** Choose your preferred option:
-
-1. **Demo & Test:** Use http://localhost:3000 immediately
-2. **Deploy Own:** Run `./deploy-to-production.sh`
-3. **Customize:** Modify contracts and redeploy
-4. **Scale:** Add more features and assets
-
-**Need help?** Check:
-- Nibiru Docs: https://nibiru.fi/docs
-- CosmWasm Docs: https://docs.cosmwasm.com
-- Deployment logs in the terminal
-
----
-
-*🎉 Congratulations! You have a complete, professional money market platform ready to go!* 
+*Congratulations! You have a complete, professional money market platform ready to go!* 

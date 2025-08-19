@@ -1,8 +1,8 @@
-# 🤝 Contributing to Nibiru Money Market
+# Contributing to Nibiru Money Market
 
 Thank you for your interest in contributing to the Nibiru Money Market project! This document provides guidelines and information for contributors.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Code of Conduct](#code-of-conduct)
 - [Getting Started](#getting-started)
@@ -13,11 +13,11 @@ Thank you for your interest in contributing to the Nibiru Money Market project! 
 - [Testing](#testing)
 - [Documentation](#documentation)
 
-## 🎯 Code of Conduct
+## Code of Conduct
 
 This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -39,7 +39,7 @@ This project and everyone participating in it is governed by our Code of Conduct
    git remote add upstream https://github.com/original-owner/nibiru-money-market.git
    ```
 
-## 🔧 Development Setup
+## Development Setup
 
 ### Smart Contracts
 
@@ -76,7 +76,7 @@ npm test
 npm run build
 ```
 
-## 📝 Contributing Guidelines
+## Contributing Guidelines
 
 ### Issue Reporting
 
@@ -108,7 +108,7 @@ For bug fixes:
 3. **Add tests** to prevent regression
 4. **Update documentation** if needed
 
-## 🔄 Pull Request Process
+## Pull Request Process
 
 ### Before Submitting
 
@@ -149,7 +149,7 @@ Brief description of changes
 3. **Address feedback** promptly
 4. **Maintainers approve** and merge
 
-## 🎨 Code Style
+## Code Style
 
 ### Rust (Smart Contracts)
 
@@ -193,7 +193,7 @@ const AssetCard: React.FC<{ asset: Asset }> = ({ asset }) => {
 };
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Smart Contract Tests
 
@@ -233,7 +233,7 @@ test('renders asset information', () => {
 });
 ```
 
-## 📚 Documentation
+## Documentation
 
 ### Code Documentation
 
@@ -249,7 +249,7 @@ test('renders asset information', () => {
 - **Troubleshooting** common issues
 - **FAQ** section
 
-## 🚀 Release Process
+## Release Process
 
 ### Versioning
 
@@ -268,7 +268,7 @@ We use [Semantic Versioning](https://semver.org/):
 - [ ] Release notes written
 - [ ] GitHub release created
 
-## 🆘 Getting Help
+## Getting Help
 
 ### Communication Channels
 
@@ -286,7 +286,7 @@ New contributors can:
 3. **Request reviews** from maintainers
 4. **Join community** calls/meetings
 
-## 🙏 Recognition
+## Recognition
 
 Contributors will be:
 
@@ -297,6 +297,6 @@ Contributors will be:
 
 ---
 
-**Thank you for contributing to the Nibiru Money Market project!** 🚀
+**Thank you for contributing to the Nibiru Money Market project!** 
 
 Your contributions help make DeFi more accessible and secure for everyone. 

@@ -1,8 +1,8 @@
-# 🛠️ Scripts Directory
+# Scripts Directory
 
 This directory contains deployment and utility scripts for the Nibiru Money Market project.
 
-## 📁 Files
+## Files
 
 ### `deploy-to-production.sh`
 **Production-ready deployment script** for deploying smart contracts to any CosmWasm-compatible chain.
@@ -38,7 +38,7 @@ CHAIN_ID="uni-6" RPC_URL="https://rpc.uni.junonetwork.io:443" ./deploy-to-produc
 - Asset configurations
 - Contract deployment settings
 
-## 🚀 Quick Deployment
+## Quick Deployment
 
 ### 1. Prerequisites
 ```bash
@@ -70,7 +70,7 @@ nibid query wasm list-code --node https://rpc.testnet-2.nibiru.fi:443
 nibid query wasm contract <CONTRACT_ADDRESS> --node https://rpc.testnet-2.nibiru.fi:443
 ```
 
-## 🌐 Network Configuration
+## Network Configuration
 
 ### Environment Variables
 ```bash
@@ -109,7 +109,7 @@ Add your own network configuration to `deployment-config.json`:
 }
 ```
 
-## 🔧 Customization
+## Customization
 
 ### Modify Deployment Script
 Edit `deploy-to-production.sh` to:
@@ -135,7 +135,7 @@ case $asset in
 esac
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Test Deployment
 ```bash
@@ -155,7 +155,7 @@ nibid query wasm contract-state smart <CONTRACT_ADDR> '{"get_markets":{}}' --nod
 nibid tx wasm execute <CONTRACT_ADDR> '{"supply":{}}' --from deployer --chain-id $CHAIN_ID
 ```
 
-## 📊 Monitoring
+## Monitoring
 
 ### Deployment Logs
 The deployment script generates detailed logs:
@@ -177,7 +177,7 @@ nibid query wasm contract <CONTRACT_ADDR> --node $RPC_URL
 nibid query tx <TX_HASH> --node $RPC_URL
 ```
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -202,7 +202,7 @@ DEBUG=true ./deploy-to-production.sh
 VERBOSE=true ./deploy-to-production.sh
 ```
 
-## 📚 Resources
+## Resources
 
 - [Nibiru Documentation](https://docs.nibiru.fi)
 - [CosmWasm Documentation](https://docs.cosmwasm.com)
