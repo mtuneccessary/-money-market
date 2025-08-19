@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.ff6711c3.css",
-    "main.js": "/static/js/main.db14e09c.js",
-    "static/js/453.54292a4b.chunk.js": "/static/js/453.54292a4b.chunk.js",
-    "index.html": "/index.html",
-    "main.ff6711c3.css.map": "/static/css/main.ff6711c3.css.map",
-    "main.db14e09c.js.map": "/static/js/main.db14e09c.js.map",
-    "453.54292a4b.chunk.js.map": "/static/js/453.54292a4b.chunk.js.map"
+    "main.css": "/-money-market/static/css/main.ff6711c3.css",
+    "main.js": "/-money-market/static/js/main.a364d5f9.js",
+    "static/js/453.54292a4b.chunk.js": "/-money-market/static/js/453.54292a4b.chunk.js",
+    "index.html": "/-money-market/index.html",
+    "main.ff6711c3.css.map": "/-money-market/static/css/main.ff6711c3.css.map",
+    "main.a364d5f9.js.map": "/-money-market/static/js/main.a364d5f9.js.map",
+    "453.54292a4b.chunk.js.map": "/-money-market/static/js/453.54292a4b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ff6711c3.css",
-    "static/js/main.db14e09c.js"
+    "static/js/main.a364d5f9.js"
   ]
 }
