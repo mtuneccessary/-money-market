@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/-money-market/static/css/main.fe51319c.css",
-    "main.js": "/-money-market/static/js/main.fa951964.js",
+    "main.css": "/-money-market/static/css/main.7d14397a.css",
+    "main.js": "/-money-market/static/js/main.df982b8d.js",
     "static/js/453.54292a4b.chunk.js": "/-money-market/static/js/453.54292a4b.chunk.js",
     "index.html": "/-money-market/index.html",
-    "main.fe51319c.css.map": "/-money-market/static/css/main.fe51319c.css.map",
-    "main.fa951964.js.map": "/-money-market/static/js/main.fa951964.js.map",
+    "main.7d14397a.css.map": "/-money-market/static/css/main.7d14397a.css.map",
+    "main.df982b8d.js.map": "/-money-market/static/js/main.df982b8d.js.map",
     "453.54292a4b.chunk.js.map": "/-money-market/static/js/453.54292a4b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe51319c.css",
-    "static/js/main.fa951964.js"
+    "static/css/main.7d14397a.css",
+    "static/js/main.df982b8d.js"
   ]
 }
